@@ -1,20 +1,8 @@
-#pragma once
 #include<iostream>
-#include<memory>
 #include<list>
+#include"list_with_numbers_of_repeats.h"
 
-#ifndef A1
-#define A1
-#define A2
-
-#ifdef A3
-template<typename T1>
-struct del {
-	std::list<T1> delete_nth(std::list<T1>& source_lst, const int& num_of_repeats);
-};
-#endif // A3
-
-#ifdef A2
+#ifdef A4
 template<typename T1>
 std::list<T1> delete_nth(std::list<T1>& source_lst, const int& num_of_repeats) {
 	//std::list<int> new_lst(1, *source_lst.begin());
@@ -43,12 +31,4 @@ std::list<T1> delete_nth(std::list<T1>& source_lst, const int& num_of_repeats) {
 	}
 	return new_lst;
 }
-#endif // A2
-
-template<typename T1>
-void print(const std::list<T1>& lst) {
-	for (auto it = lst.cbegin(); it != lst.cend(); ++it) {
-		std::cout << *it << std::endl;
-	}
-}
-#endif // !A1
+#endif // A4
